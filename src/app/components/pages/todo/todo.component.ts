@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-todo',
   imports: [],
   templateUrl: './todo.component.html',
-  styleUrl: './todo.component.scss'
+  styleUrl: './todo.component.scss',
+  standalone: true
 })
 export class TodoComponent {
 
