@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './todo.component.scss',
   standalone: true
 })
-export class TodoComponent {
 
+export class TodoComponent {
+  constructor(private router:Router){}
+  toDetails(id: number){
+    this.router.navigate(['/todos', id]);
+  }
+  @Input() title='V';
+  textColor="red";
 }

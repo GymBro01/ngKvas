@@ -7,8 +7,13 @@ import { TodoComponent } from './components/pages/todo/todo.component';
 
 export const routes: Routes = [
     {path:"", component: HomeComponent},
-    {path:"todos", component: TodoComponent},
-    {path:"todos/:id", component:TodoDetailsComponent},
+    {path:"todos", loadComponent:
+     ()=>import('./components/pages/todo/todo.component')
+     .then(m=>m.TodoComponent)
+    },
     {path:"about", component:AboutComponent},
-    {path:"WTKVAS", component:NotFoundComponent}
+    {path:"todos/:id", loadComponent:
+    ()=>import('./components/pages/todo-details/todo-details.component')
+    .then(m=>m.TodoDetailsComponent)},
+    {path:"**", component:NotFoundComponent}
 ];
