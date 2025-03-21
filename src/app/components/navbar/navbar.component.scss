@@ -5,15 +5,16 @@
     background-color: #000;
     padding: 30px;
 
-    &__list
+    &_list
     {
         @include flex-center;
         gap: 1rem;
     }
 
-    &__item
+    &_item
     {
         list-style: none;
+        text-decoration: none;
         color: #fff;
     }
 }
