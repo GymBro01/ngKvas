@@ -4,4 +4,5 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [angular(), tsconfigPaths()],
+  base: 'https://github.com/GymBro01/ngKvas'
 });
