@@ -1,0 +1,16 @@
+
+<div class="container">
+  <form [FormGroup]="logForm" (ngSubmit)="onSubmit()">
+    <div class="titleCont"></div>
+    <div class="inputCont">
+        <h1 class="inputName">Username or email</h1>
+        <input type="text" formControlName="user" placeholder="Username/email">
+    </div>
+    <div class="inputCont">
+        <h1 class="inputName">Password</h1>
+        <input type="text" formControlName="password" placeholder="Password">
+    </div>
+    <button type="submit" [disable]="logForm.invalid">Log in</button>
+  </form>  
+</div>
+

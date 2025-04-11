@@ -15,5 +15,9 @@ export const routes: Routes = [
     {path:"todos/:id", loadComponent:
     ()=>import('./components/pages/todo-details/todo-details.component')
     .then(m=>m.TodoDetailsComponent)},
-    {path:"**", component:NotFoundComponent}
+    {path:"**", component:NotFoundComponent},
+    {path:"login", loadComponent:
+     ()=>import('./components/pages/login/login.component')
+     .then(m=>m.LoginComponent)
+    }
 ];
